@@ -1,0 +1,94 @@
+:root {
+  --cell-size: 64px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: black;
+  font-size: 16px;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 200px auto 50px auto;
+  font: 16px Arial;
+  font-weight: 400;
+}
+
+.info {
+  width: 128px;
+  margin-bottom: 30px;
+  padding: 5px 2px;
+  border-radius: 5px;
+
+  color: #212529;
+  background-color: #f8f9fa;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.board-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+
+.cell {
+  display: block;
+  border: 1px solid yellow;
+
+  box-sizing: border-box;
+  background-color: burlywood;
+
+  width: var(--cell-size);
+  height: var(--cell-size);
+}
+
+.gnome {
+  background-image: url('../img/goblin.png');
+  background-size: contain;
+  cursor: url('../img/hammer.png') 4 1,pointer;
+}
+
+.gameOver {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+}
+
+.gameOverMessage {
+  margin: auto;
+  font-size: 80px;
+  font-weight: 800;
+  color: red;
+}
+
+
